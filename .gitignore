@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+key.env
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Uploads
+uploads/
+
+# Large files
+*.pdf
+
+# Mac files
+.DS_Store
