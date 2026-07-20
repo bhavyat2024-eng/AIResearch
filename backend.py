@@ -1,7 +1,7 @@
 import pymupdf # type: ignore
 #import pygame # type: ignore
 import re
-import ftfy
+#import ftfy
 from sentence_transformers import SentenceTransformer
 import numpy
 from openai import OpenAI
