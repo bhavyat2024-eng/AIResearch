@@ -1,0 +1,9 @@
+Flask
+flask-cors
+python-dotenv
+supabase
+PyMuPDF
+sentence-transformers
+numpy
+requests
+gunicorn
