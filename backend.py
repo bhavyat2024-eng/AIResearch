@@ -1,5 +1,5 @@
 import pymupdf # type: ignore
-import pygame # type: ignore
+#import pygame # type: ignore
 import re
 import ftfy
 from sentence_transformers import SentenceTransformer
@@ -424,9 +424,9 @@ def followup():
         "response":
         response.choices[0].message.content
     }
-@app.route("/features")
-def features():
-    return render_template("features.html")
+#@app.route("/features")
+#def features():
+#    return render_template("features.html")
 # @app.route("/login")
 # def login():
 
@@ -436,5 +436,99 @@ def features():
 # @app.route("/loggedin")
 # def loggedin():
 
+# @app.route("/features.html")
+# def features():
+#     return render_template("features.html")
+# @app.route("/login.html")
+# def login():
+#     return render_template("login.html")
+
+# @app.route("/About.html")
+# def profile():
+#     return render_template("About.html")
+
+# @app.route("/loggedin.html")
+# def loggedin():
+#     return render_template("loggedin.html")
+
+# @app.route("/Notes.html")
+# def Notes():
+#     return render_template("Notes.html")
+
+# @app.route("/")
+# def test():
+#     return render_template("test.html")
+
+# @app.route("/profile")
+# def test():
+#     return render_template("profile.html")
+
+# @app.route("/response")
+# def test():
+#     return render_template("response.html")
+
+# @app.route("/PrivacyPolicy")
+# def test():
+#     return render_template("PrivacyPolicy.html")
+
+# @app.route("/Notes")
+# def test():
+#     return render_template("Notes.html")
+
+@app.route("/")
+def home():
+    return render_template("test.html")
+
+
+@app.route("/features")
+def features():
+    return render_template("features.html")
+
+
+@app.route("/About")
+def about():
+    return render_template("About.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+# @app.route("/loggedin")
+# def loggedin():
+#     return render_template("loggedin.html")
+
+@app.route("/loggedin")
+def loggedin():
+    return "<h1 style='color:red;font-size:100px'>THIS IS THE NEW ROUTE</h1>"
+
+
+@app.route("/Notes")
+def notes():
+    return render_template("Notes.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
+
+@app.route("/response")
+def response():
+    return render_template("response.html")
+
+
+@app.route("/privacy")
+def privacy():
+    return render_template("PrivacyPolicy.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "FLASK RECEIVED THIS REQUEST BUT NO ROUTE EXISTS: " + request.path, 404
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
+#if __name__ == "__main__":
+#    app.run(debug=True)
